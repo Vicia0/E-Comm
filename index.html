@@ -126,20 +126,21 @@
         <div class="container">
             <h3 class="fw-bold mb-sm-3 mb-md-5 text-center text-md-start">New products</h3>
 
-            <div class="row g-3 d-flex justify-content-evenly">
-                <div class="card" id="card-width">
-                    <img alt="GoPro HERO6 4K Action" class="img"
+            <div id="product-container" class="row g-3 d-flex justify-content-evenly">
+               <!-- <div class="card" id="card-width">
+                        <img alt="GoPro HERO6 4K Action" class="img"
                         src="img/GoPro HERO6 4K Action.jpg" width="100%"
                         height="240px" img>
-                    <div class="card-body">
+                        <div class="card-body">
                         <hr>
-                        <h5 class="card-title">$790.50</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">GoPro HERO6 4K Action</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Camera - Black</h6>
-                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
-                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link"> <i class="fa-solid fa-heart"></i></a>
-                    </div>
-                </div> <!--First Card--->
+                            <h5 class="card-title">$790.50</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">GoPro HERO6 4K Action</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Camera - Black</h6>
+                            <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                            <a title="Add to cart" href="#" class="btn btn-outline-primary card-link"> <i class="fa-solid fa-heart"></i></a>
+                        </div>
+                </div> 
+                
 
 
 
@@ -157,7 +158,7 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  2nd card -->
+                </div>
 
 
 
@@ -175,13 +176,13 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  3rd card -->
+                </div>
 
 
 
                 <div class="card" id="card-width">
                     <img alt="Apple iPhone 12 Pro 6.1"
-                        src="img/Apple iPhone 12 Pro 6.1 RAM.jpg" width="100%"
+                        src="img/iphone12.jpg" width="100%"
                         height="240px" img>
 
                     <div class="card-body">
@@ -193,7 +194,7 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  4th card -->
+                </div>
 
 
 
@@ -213,7 +214,7 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  5th card -->
+                </div>
 
 
 
@@ -232,7 +233,7 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  6th card -->
+                </div>
 
 
 
@@ -251,7 +252,7 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  7th card -->
+                </div>
 
 
 
@@ -269,9 +270,10 @@
                         <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
                         <a title="Add to cart" Fhref="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
                     </div>
-                </div><!--  8th card -->
+                </div> -->
 
-            </div><!--row and container div--->
+            </div>
+            <!--row and container div--->
         </div>
 
 
@@ -486,12 +488,48 @@
 
             </div>
         </div>
+    </div>
 
 
 
 
+<script src="js/product.js"></script>
+<script>
+    // Get a reference to the product container
+    const productContainer = document.getElementById("product-container");
 
+    // Function to render products
+    function renderProducts() {
+        // Loop through each product
+        products.forEach(product => {
+            // Create a new div element for each product
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
 
+            // Add product details to the div
+            productDiv.innerHTML = `
+            <div  class="d-flex justify-content-evenly">
+                <div class="card" id="card-width">
+                    <img src="${product.image}" alt="${product.title}" class="img" width="100%" height="240px">
+                    <div class="card-body">
+                        <h3 class="card-subtitle mb-2 text-muted">${product.title}</h3>
+                        <p class="card-title">Price: $${product.price}</p>
+                        <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
+                    </div>
+                </div>
+            </div>
+        
+                
+            `;
+
+            // Append the product div to the container
+            productContainer.appendChild(productDiv);
+        });
+    }
+
+    // Call the renderProducts function to display products
+    renderProducts();
+</script>
 
 </body>
 

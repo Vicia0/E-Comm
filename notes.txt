@@ -1,0 +1,19 @@
+Work in the js repository
+cart - total calculation
+wishlist
+script
+
+
+sign in 
+and 
+sign up
+
+add enough info in the product.js:
+    -  Image
+    -  Product name and description
+    -  Price
+    -  Category
+
+product dynamically displayed in the index.html
+
+- remaining: styling
