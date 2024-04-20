@@ -12,8 +12,8 @@
 
 /* shop now btn */
 
-#shop-btn{
-    background-color:#ff8100;
+#shop-btn {
+    background-color: #ff8100;
 }
 
 /* width of every cards on product section */
@@ -31,7 +31,7 @@
 
 /* product container */
 
-#product-container{
+#product-container {
     gap: 30px;
 }
 
