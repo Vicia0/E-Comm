@@ -29,6 +29,12 @@
 }
 
 
+/* product container */
+
+#product-container{
+    gap: 30px;
+}
+
 
 
 
@@ -74,4 +80,17 @@
     .bg {
         width: 100%;
     }
+}
+
+/* notification */
+
+.notification {
+    display: flex;
+    border: solid 1px #ff8100;
+    border-radius: 20px;
+    padding: 10px 20px;
+    max-width: fit-content;
+    margin-bottom: 10px;
+    font-size: 14px;
+    justify-self: center;
 }

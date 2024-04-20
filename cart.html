@@ -113,9 +113,9 @@
         <div class="container">
             <h3 class="fw-bold mb-sm-3 mb-md-5 text-center text-md-start">My Cart</h3>
 
-            <h4 class="fw-bold text-center">No Products in your Card Yet!</h4>
+            <!-- <h4 class="fw-bold text-center">No Products in your Card Yet!</h4> -->
         </br>
-        <div id="product-container"  class="container">
+        <div id="product-container" class="g-3 d-flex flex-wrap justify-content-evenly g-10">
             <!-- <div  class="row g-3 d-flex justify-content-evenly"> -->
                 
                 <!-- Products will be dynamically added here -->
@@ -206,44 +206,8 @@
 
 
 
-
 <script src="js/product.js"></script>
-<script>
-    // Get a reference to the product container
-    const productContainer = document.getElementById("product-container");
-
-    // Function to render products
-    function renderProducts() {
-        // Loop through each product
-        products.forEach(product => {
-            // Create a new div element for each product
-            const productDiv = document.createElement("div");
-            productDiv.classList.add("product");
-
-            // Add product details to the div
-            productDiv.innerHTML = `
-            <div  class="row g-3 d-flex justify-content-evenly">
-                <div class="card" id="card-width">
-                    <img src="${product.image}" alt="${product.title}" class="img" width="100%" height="240px">
-                    <div class="card-body">
-                        <h3 class="card-subtitle mb-2 text-muted">${product.title}</h3>
-                        <p class="card-title">Price: $${product.price}</p>
-                        <p class="card-subtitle mb-2 text-muted">Color: ${product.color}</p>
-                    </div>
-                </div>
-            </div>
-        
-                
-            `;
-
-            // Append the product div to the container
-            productContainer.appendChild(productDiv);
-        });
-    }
-
-    // Call the renderProducts function to display products
-    renderProducts();
-</script>
+<script src="js/cart.js"></script>
 </body>
 
 </html>
