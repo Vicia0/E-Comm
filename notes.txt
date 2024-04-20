@@ -1,14 +1,14 @@
-Work in the js directory
-cart - total calculation
-wishlist
-script
+Work in the js directory ✅
+cart - total calculation ✅
+wishlist ✅
+script - NOT YET
 
 
-sign in 
+"sign in 
 and 
-sign up
+sign up" <-- NOT YET OR NEVER
 
-add enough info in the product.js:
+add enough info in the product.js:  ✅
     -  Image
     -  Product name and description
     -  Price
@@ -17,5 +17,13 @@ add enough info in the product.js:
 product dynamically displayed in the index.html✅
 
 - remaining: styling✅
-index
+index ✅
     - displayed card should have the add to cart button and the  wish list button
+
+
+filtering by 
+    - categories
+    - deal
+    - dates (new)
+
+search functionalities

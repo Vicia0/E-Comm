@@ -56,9 +56,13 @@
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
-          <a type="button" class="btn btn-outline-primary fw-500 rounded">
-            <i class="fa-solid fa-user me-lg-2"></i>
-            <p class="d-none d-lg-inline">Sign in</p>
+          <a
+            type="button"
+            class="btn btn-outline-primary fw-500 rounded"
+            href="/index.html"
+          >
+            <i class="fa-solid fa-home me-lg-2"></i>
+            <p class="d-none d-lg-inline">Home</p>
           </a>
           <a
             type="button"
@@ -85,7 +89,7 @@
         </ul>
       </div>
     </div>
-    <!--Container div!-->
+
     <hr />
 
     <!--  Cart Products section   -->
@@ -104,80 +108,164 @@
         >
           <!-- <div  class="row g-3 d-flex justify-content-evenly"> -->
 
-          <!-- Products will be dynamically added here -
-                
-                 <!--First Card--->
+          <!-- Products will be dynamically added here -->
         </div>
       </div>
       <!--row and container div--->
     </div>
 
-    <!-- Footer -->
-
-    <div class="py-5">
+    <!-- Checkout details -->
+    <div id="checkout-details" class="py-5">
       <div class="container">
+        <div id="checkout-items"></div>
+        <div
+          id="notification-total"
+          class="border border-primary rounded text-primary mt-3"
+          style="display: none"
+        ></div>
+        <button class="border border-primary text-primary mt-3 checkout">
+          Check Total
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="py-5 footer-container">
+      <div class="container" style="z-index: 1">
         <div class="row d-flex">
           <div class="col-md-12 col-lg-3 mb-3">
-            <img
-              alt="logo"
-              src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/logo.svg"
-            />
-            <p class="mt-4 text-muted">
-              © 2014- 2025 <br />
+            <img alt="logo" src="/img/logo.svg" />
+            <p class="mt-4 footer-text">
+              © 2024 <br />
               All rights reserved.
             </p>
           </div>
 
           <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-            <h6 class="h6 fw-bold">Store</h6>
+            <h6 class="h6 fw-bold footer-text">Information</h6>
 
-            <a href="#" class="text-decoration-none text-muted">About us</a>
-            <a href="#" class="text-decoration-none text-muted">Find stories</a>
-            <a href="#" class="text-decoration-none text-muted">Categories</a>
-            <a href="#" class="text-decoration-none text-muted">Blogs</a>
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >About us</a
+            >
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >Find stories</a
+            >
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >Categories</a
+            >
           </div>
 
           <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-            <h6 class="h6 fw-bold">Information</h6>
-            <a href="#" class="text-decoration-none text-muted">About us</a>
-            <a href="#" class="text-decoration-none text-muted">Find stories</a>
-            <a href="#" class="text-decoration-none text-muted">Categories</a>
-            <a href="#" class="text-decoration-none text-muted">Blogs</a>
+            <h6 class="h6 fw-bold">Stores</h6>
           </div>
 
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mt-3 mt-md-0">
             <h6 class="h6 fw-bold">Support</h6>
-            <a href="#" class="text-decoration-none text-muted">About us</a>
-            <a href="#" class="text-decoration-none text-muted">Find stories</a>
-            <a href="#" class="text-decoration-none text-muted">Categories</a>
-            <a href="#" class="text-decoration-none text-muted">Blogs</a>
           </div>
 
-          <div class="col-lg-3 mt-3 mt-lg-0">
+          <div class="col-lg-3 mt-3 mt-lg-0" style="z-index: 10">
             <h6 class="h6 fw-bold">Newsletter</h6>
-            <p class="text-muted">
-              Stay in touch with latest updates about our products and offers
-            </p>
-
-            <div class="input-group">
+            <div class="input-group" style="padding-top: 15px">
               <input
                 type="text"
                 class="form-control"
                 placeholder="Email"
                 aria-label="Email"
                 aria-describedby="basic-addon2"
+                style="background: none; gap: 20px"
               />
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">Join</button>
+              <div class="input-group-append" style="padding-left: 10px">
+                <button class="btn btn-primary" type="button">Join</button>
               </div>
             </div>
           </div>
         </div>
         <!--row div-->
       </div>
+      <div class="mountain"></div>
     </div>
+
+    <!-- Notification for total cost -->
+    <div
+      id="notification"
+      style="display: none"
+      class="notification border border-primary rounded text-primary checkoutnotif"
+    ></div>
 
     <script src="js/product.js"></script>
     <script src="js/cart.js"></script>
+    <script>
+      // Define function to calculate total cost
+      function calculateTotalCost(cart) {
+        let totalCost = 0;
+        cart.forEach((product) => {
+          // Convert price to number before adding to totalCost
+          totalCost += parseFloat(product.price);
+        });
+        return totalCost;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkoutButton = document.querySelector(".checkout");
+        const notification = document.getElementById("notification");
+        const productContainer = document.getElementById("product-container");
+
+        // Function to update total cost
+        function updateTotalCost() {
+          let totalCost = 0;
+          const productItems = document.querySelectorAll(".product-item");
+          productItems.forEach((item) => {
+            const price = parseFloat(item.dataset.price);
+            const quantity = parseInt(item.querySelector(".quantity").value);
+            totalCost += price * quantity;
+          });
+          notification.innerText =
+            "Total Cost: $" +
+            totalCost.toFixed(2) +
+            "\nPlease Contact the Seller on +250 790 000 001";
+        }
+
+        // Event listener for quantity change
+        productContainer.addEventListener("change", function (event) {
+          if (event.target.classList.contains("quantity")) {
+            updateTotalCost();
+          }
+        });
+
+        // Event listener for checkout button click
+        checkoutButton.addEventListener("click", function () {
+          // Retrieve cart data from local storage
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+          // Clear previous product items
+          productContainer.innerHTML = "";
+
+          // Display each product in the cart
+          cart.forEach((product) => {
+            const productItem = document.createElement("div");
+            productItem.classList.add("product-item");
+            productItem.dataset.price = parseFloat(product.price);
+
+            productItem.innerHTML = `
+                <p>${product.title} - $${product.price}</p>
+                <select class="form-select quantity">
+                    ${Array.from(
+                      { length: 10 },
+                      (_, i) => `<option value="${i + 1}">${i + 1}</option>`
+                    ).join("")}
+                </select>
+            `;
+
+            productContainer.appendChild(productItem);
+          });
+
+          // Update total cost initially
+          updateTotalCost();
+
+          // Display notification
+          notification.style.display = "block";
+        });
+      });
+    </script>
   </body>
 </html>

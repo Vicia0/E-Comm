@@ -30,8 +30,16 @@
   </head>
 
   <body>
-    <div id="notification" style="display: none" class="notification border border-primary rounded text-primary"></div>
-    <div id="wishlist-notification" style="display: none" class="notification border border-primary rounded text-primary"></div>
+    <div
+      id="notification"
+      style="display: none"
+      class="notification border border-primary rounded text-primary"
+    ></div>
+    <div
+      id="wishlist-notification"
+      style="display: none"
+      class="notification border border-primary rounded text-primary"
+    ></div>
     <div class="container pt-3">
       <div class="input-group">
         <a class="navbar-brand" href="/index.html">
@@ -59,9 +67,13 @@
         </button>
 
         <div class="ms-md-5 mt-2 mt-md-0">
-          <a type="button" class="btn btn-outline-primary fw-500 rounded">
-            <i class="fa-solid fa-user me-lg-2"></i>
-            <p class="d-none d-lg-inline">Sign in</p>
+          <a
+            type="button"
+            class="btn btn-outline-primary fw-500 rounded active"
+            href="/index.html"
+          >
+            <i class="fa-solid fa-home me-lg-2"></i>
+            <p class="d-none d-lg-inline">Home</p>
           </a>
           <a
             type="button"
@@ -82,9 +94,9 @@
         </div>
 
         <ul class="dropdown-menu dropdown-menu-start">
-          <li><a class="dropdown-item" href="#">Best</a></li>
-          <li><a class="dropdown-item" href="#">Special</a></li>
           <li><a class="dropdown-item" href="#">Latest</a></li>
+          <li><a class="dropdown-item" href="#">Hot deals</a></li>
+          <li><a class="dropdown-item" href="#">Gift boxes</a></li>
         </ul>
       </div>
     </div>
@@ -107,44 +119,27 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active bold" aria-current="page" href="#"
                 >Categories</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hot offers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Gift boxes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu item</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Menu name</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Others
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+              <ul style="list-style: none; display: flex; gap: 20px;">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >All</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >Electronics</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Clothing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Furniture</a>
                 </li>
               </ul>
             </li>
@@ -182,6 +177,7 @@
         <h3 class="fw-bold mb-sm-3 mb-md-5 text-center text-md-start">
           New products
         </h3>
+
         <div
           id="product-container"
           class="g-3 d-flex flex-wrap justify-content-evenly g-10"
@@ -279,161 +275,63 @@
           <!--row idv--->
         </div>
       </div>
-
-      <!--blog post---->
-      <div class="pb-5">
-        <div class="container py-5">
-          <h3 class="h3 fw-bold mb-3 text-center text-md-start mb-3">
-            Blog posts
-          </h3>
-          <div class="row mt-md-5">
-            <div class="col-sm-6 col-md-6 col-lg-3">
-              <img
-                alt="boxes"
-                class="bg rounded"
-                src="img/boxes.jpg"
-                width="250"
-                height="200"
-                img
-              />
-              <div class="mt-3">
-                <a href="#" class="fw-bold">How to promote brands</a>
-                <p class="text-muted">
-                  When you enter into any new area of science, you almost reach
-                </p>
-              </div>
-            </div>
-            <!--col div -->
-
-            <div class="col-sm-6 col-md-6 col-lg-3">
-              <img
-                alt="shipping"
-                class="bg rounded"
-                src="img/ship.jpg"
-                width="250"
-                height="200"
-                img
-              />
-              <div class="mt-3">
-                <a class="fw-bold">How we handle shipping</a>
-                <p class="text-muted">
-                  When you enter into any new area of science, you almost reach
-                </p>
-              </div>
-            </div>
-            <!--col div -->
-
-            <div class="col-sm-6 col-md-6 col-lg-3">
-              <img
-                alt="fruit"
-                class="bg rounded"
-                src="img/fruit.jpg"
-                width="250"
-                height="200"
-                img
-              />
-              <div class="mt-3">
-                <a class="fw-bold">How to promote brands</a>
-                <p class="text-muted">
-                  When you enter into any new area of science, you almost reach
-                </p>
-              </div>
-            </div>
-            <!--col div -->
-
-            <div class="col-sm-6 col-md-6 col-lg-3">
-              <img
-                alt="a girl with her laptop"
-                class="bg rounded"
-                src="img/girl.jpg"
-                width="250"
-                height="200"
-                img
-              />
-              <div class="mt-3">
-                <a class="fw-bold">Success story of sellers</a>
-                <p class="text-muted">
-                  When you enter into any new area of science, you almost reach
-                </p>
-              </div>
-            </div>
-            <!--col div -->
-          </div>
-          <!-- div row -->
-        </div>
-      </div>
-      <!-- Footer -->
-
-      <div class="py-5">
-        <div class="container">
-          <div class="row d-flex">
-            <div class="col-md-12 col-lg-3 mb-3">
-              <img
-                alt="logo"
-                src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/logo.svg"
-              />
-              <p class="mt-4 text-muted">
-                © 2014- 2025 <br />
-                All rights reserved.
-              </p>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <h6 class="h6 fw-bold">Store</h6>
-
-              <a href="#" class="text-decoration-none text-muted">About us</a>
-              <a href="#" class="text-decoration-none text-muted"
-                >Find stories</a
-              >
-              <a href="#" class="text-decoration-none text-muted">Categories</a>
-              <a href="#" class="text-decoration-none text-muted">Blogs</a>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <h6 class="h6 fw-bold">Information</h6>
-              <a href="#" class="text-decoration-none text-muted">About us</a>
-              <a href="#" class="text-decoration-none text-muted"
-                >Find stories</a
-              >
-              <a href="#" class="text-decoration-none text-muted">Categories</a>
-              <a href="#" class="text-decoration-none text-muted">Blogs</a>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2 mt-3 mt-md-0">
-              <h6 class="h6 fw-bold">Support</h6>
-              <a href="#" class="text-decoration-none text-muted">About us</a>
-              <a href="#" class="text-decoration-none text-muted"
-                >Find stories</a
-              >
-              <a href="#" class="text-decoration-none text-muted">Categories</a>
-              <a href="#" class="text-decoration-none text-muted">Blogs</a>
-            </div>
-
-            <div class="col-lg-3 mt-3 mt-lg-0">
-              <h6 class="h6 fw-bold">Newsletter</h6>
-              <p class="text-muted">
-                Stay in touch with latest updates about our products and offers
-              </p>
-
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Email"
-                  aria-label="Email"
-                  aria-describedby="basic-addon2"
-                />
-                <div class="input-group-append">
-                  <button class="btn btn-secondary" type="button">Join</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--row div-->
-        </div>
-      </div>
     </div>
 
-    <script src="js/product.js"></script>
+    <!-- Footer -->
+    <div class="py-5 footer-container">
+      <div class="container" style="z-index: 1">
+        <div class="row d-flex">
+          <div class="col-md-12 col-lg-3 mb-3">
+            <img alt="logo" src="/img/logo.svg" />
+            <p class="mt-4 footer-text">
+              © 2024 <br />
+              All rights reserved.
+            </p>
+          </div>
+
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+            <h6 class="h6 fw-bold footer-text">Information</h6>
+
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >About us</a
+            >
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >Find stories</a
+            >
+            <a href="#" class="text-decoration-none text-muted footer-link"
+              >Categories</a
+            >
+          </div>
+
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+            <h6 class="h6 fw-bold">Stores</h6>
+          </div>
+
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2 mt-3 mt-md-0">
+            <h6 class="h6 fw-bold">Support</h6>
+          </div>
+
+          <div class="col-lg-3 mt-3 mt-lg-0" style="z-index: 10">
+            <h6 class="h6 fw-bold">Newsletter</h6>
+            <div class="input-group" style="padding-top: 15px">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email"
+                aria-label="Email"
+                aria-describedby="basic-addon2"
+                style="background: none; gap: 20px"
+              />
+              <div class="input-group-append" style="padding-left: 10px">
+                <button class="btn btn-primary" type="button">Join</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row div-->
+      </div>
+      <div class="mountain"></div>
+    </div>
+    <script src="./js/product.js"></script>
   </body>
 </html>
