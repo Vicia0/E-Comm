@@ -1,8 +1,8 @@
 const products = [
     {
         id: 0,
-        cat: "electronic",
-        title: "Smart TV 55'' 4K Ultra HD",
+        category: "clothing",
+        title: "Back pack",
         price: "999",
         color: "Black",
         image: './img/blue bag.jpg',
@@ -11,7 +11,7 @@ const products = [
     },
     {
         id: 1,
-        cat: "clothing",
+        category: "clothing",
         title: "Men's Casual Jacket",
         price: "80",
         color: "Navy Blue",
@@ -21,8 +21,8 @@ const products = [
     },
     {
         id: 2,
-        cat: "furniture",
-        title: "Modern Coffee Table",
+        category: "electronic ",
+        title: "Iphone12",
         price: "350",
         color: "White",
         image: './img/watch.jpg',
@@ -31,8 +31,8 @@ const products = [
     },
     {
         id: 3,
-        cat: "electronic",
-        title: "Wireless Bluetooth Earbuds",
+        category: "electronic",
+        title: "Apple watch",
         price: "50",
         color: "Red",
         image: './img/Xiaomi.jpg',
@@ -41,18 +41,18 @@ const products = [
     },
     {
         id: 4,
-        cat: "clothing",
-        title: "Women's Running Shoes",
+        category: "eletronic",
+        title: "Samsung A12",
         price: "60",
-        color: "Pink",
+        color: "blue",
         image: './img/headset.jpg',
         deal: "Hot Deal",
         date: "New"
     },
     {
         id: 5,
-        cat: "electronic",
-        title: "Portable Power Bank 20000mAh",
+        category: "electronic",
+        title: "Headphones ",
         price: "30",
         color: "Black",
         image: './img/gopro.jpg',
@@ -61,7 +61,7 @@ const products = [
     },
     {
         id: 6,
-        cat: "furniture",
+        category: "furniture",
         title: "Rustic Wooden Bookshelf",
         price: "200",
         color: "Brown",
@@ -71,7 +71,7 @@ const products = [
     },
     {
         id: 7,
-        cat: "electronic",
+        category: "electronic",
         title: "Wireless Gaming Mouse",
         price: "70",
         color: "RGB",
@@ -81,7 +81,7 @@ const products = [
     },
     {
         id: 8,
-        cat: "clothing",
+        category: "clothing",
         title: "Women's Yoga Pants",
         price: "25",
         color: "Purple",
@@ -91,7 +91,7 @@ const products = [
     },
     {
         id: 9,
-        cat: "furniture",
+        category: "furniture",
         title: "Adjustable Standing Desk",
         price: "400",
         color: "Black",
@@ -101,7 +101,7 @@ const products = [
     },
     {
         id: 10,
-        cat: "clothing",
+        category: "clothing",
         title: "Men's Graphic T-Shirt",
         price: "15",
         color: "Grey",
@@ -111,7 +111,7 @@ const products = [
     },
     {
         id: 11,
-        cat: "electronic",
+        category: "electronic",
         title: "Wireless Charging Pad",
         price: "20",
         color: "White",
@@ -121,7 +121,7 @@ const products = [
     },
     {
         id: 12,
-        cat: "furniture",
+        category: "furniture",
         title: "Velvet Accent Chair",
         price: "180",
         color: "Burgundy",
@@ -131,7 +131,7 @@ const products = [
     },
     {
         id: 13,
-        cat: "electronic",
+        category: "electronic",
         title: "Noise Cancelling Headphones",
         price: "150",
         color: "Silver",
@@ -141,7 +141,7 @@ const products = [
     },
     {
         id: 14,
-        cat: "clothing",
+        category: "clothing",
         title: "Women's Denim Shorts",
         price: "35",
         color: "Light Blue",
@@ -151,7 +151,7 @@ const products = [
     },
     {
         id: 15,
-        cat: "furniture",
+        category: "furniture",
         title: "Mid-Century Modern Sofa",
         price: "700",
         color: "Grey",
@@ -160,7 +160,6 @@ const products = [
         date: "Average"
     },
 ];
-
 
 // Get a reference to the product container
 const productContainer = document.getElementById("product-container");

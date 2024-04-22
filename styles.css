@@ -28,6 +28,28 @@
     font-size: 20px;
 }
 
+.category-list {
+    display: flex;
+}
+
+@media (max-width:1000px) {
+    .category-list{
+        flex-direction: column;
+        gap: 10px;
+    }
+        
+    
+}
+
+/* hero-section*/
+
+.hero {
+    background-image: url('https://img.freepik.com/photos-gratuite/assortiment-elements-du-vendredi-noir_23-2149074076.jpg?t=st=1713734782~exp=1713738382~hmac=fa1428eb8f4a343858a8ab0442a9d93dd7f510ef6cad1614251bf771558a754e&w=1380');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    justify-content: center;
+}
 
 /* product container */
 
