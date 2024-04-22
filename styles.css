@@ -13,8 +13,44 @@
 /* shop now btn */
 
 #shop-btn {
-    background-color: #ff8100;
+    background-color: #ff8100
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#shop-btn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#shop-btn {
+    animation: pulse 2s infinite;
+    /* Adjust the animation duration as needed */
+}
+
 
 /* width of every cards on product section */
 #card-width {
@@ -33,12 +69,12 @@
 }
 
 @media (max-width:1000px) {
-    .category-list{
+    .category-list {
         flex-direction: column;
         gap: 10px;
     }
-        
-    
+
+
 }
 
 /* hero-section*/
@@ -65,7 +101,7 @@
     border: 1px solid #ff8100 !important;
 }
 
-.btnlike:hover{
+.btnlike:hover {
     background-color: #ff8100 !important;
     opacity: 0.8;
 }
@@ -79,7 +115,7 @@
     border: none;
 }
 
-.btncart:hover{
+.btncart:hover {
     opacity: 0.8;
 }
 
@@ -151,7 +187,7 @@
     background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
-    width: 100% ;
+    width: 100%;
     margin-bottom: 10px;
     left: 50%;
     font-size: 14px;
@@ -188,22 +224,31 @@
 /* Footer */
 
 .footer-container {
-    background-color: #ffffff; /* White background */
-    position: relative; /* Positioning context for mountains */
-    overflow: hidden; /* Hide overflowing mountain shapes */
+    background-color: #ffffff;
+    /* White background */
+    position: relative;
+    /* Positioning context for mountains */
+    overflow: hidden;
+    /* Hide overflowing mountain shapes */
     z-index: 1;
-  }
-  
-  /* Mountain shape */
-  .mountain {
-    position: absolute; /* Position mountains relative to footer */
-    bottom: 0; /* Align mountains to bottom of footer */
-    left: 0; /* Align mountains to left of footer */
-    width: 100%; /* Full width */
-    height: 200px; /* Height of mountain shapes */
-    background-color: #ff8100; /* Mountain color */
-    clip-path: polygon(0 100%, 100% 0, 100% 100%); /* Create triangular shape */
-    
-    
-  }
+}
 
+/* Mountain shape */
+.mountain {
+    position: absolute;
+    /* Position mountains relative to footer */
+    bottom: 0;
+    /* Align mountains to bottom of footer */
+    left: 0;
+    /* Align mountains to left of footer */
+    width: 100%;
+    /* Full width */
+    height: 200px;
+    /* Height of mountain shapes */
+    background-color: #ff8100;
+    /* Mountain color */
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    /* Create triangular shape */
+
+
+}
