@@ -171,7 +171,18 @@
 }
 
 .checkoutnotif {
- top: 50%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    justify-self: center;
+    z-index: 1000;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    opacity: 0.95;
+    width: 100%;
 }
 
 /* Footer */
